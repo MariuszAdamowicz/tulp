@@ -1,0 +1,20 @@
+class Functions {
+    sum(a: Int, b: Int): (c: Int) {
+        c = a + b
+    }
+
+    sum_2(a: Int, b: Int): Int {
+        return a + b
+    }
+
+    sum_3(a: Int, b: Int): Int = a + b
+
+    sum_4(a: Int, b: Int) = a + b
+
+    sum_5(a: Int, b: Int): () {
+        println('sum of \{a} and \{b} is \{a+b}'
+    }
+
+    sum_6(a: Int, b: Int) = println('sum of \{a} and \{b} is \{a+b}'
+
+}
