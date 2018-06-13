@@ -1,0 +1,5 @@
+class Greetings {
+    main() {
+        println('Hello World')
+    }
+}
