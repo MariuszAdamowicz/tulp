@@ -1,0 +1,55 @@
+/*
+TUPLE
+*/
+// Tuple can have many elements different types
+// Tuple is between brackets
+a = (1, 'Ala', 3.45)
+// Each element could have name
+b = (idx: 1, name: 'Ala', result: 3.45)
+
+// Access to tuple element
+c = b.idx
+d = b.name
+e = b.result
+
+// When tuple is without element names, then we can use numbers
+f = a.0 // 1
+g = a.1 // 'Ala'
+h = a.2 // 3.45
+
+// Decomposition tuple
+(i, j, k) = a // i = 1; j = 'Ala'; k = 3.45
+
+/*
+ARRAY
+*/
+// Array can have many elements the same type
+m = [1,2,3]     // m: Array<Int>
+
+// Access to array element
+n = m[2]    // n = 3
+o = m.1     // o = 2
+
+/*
+MAP
+*/
+p = ['USA': 'Washington', 'Poland': 'Warsaw', 'Russia': 'Moscow']   // p: Map<String,String>
+
+// Access to map element
+q = p['USA']
+r = p.Poland
+
+/*
+SET
+*/
+s = {1,2,3,2,4,5}   // s = {1,2,3,4,5}; each element can occur only one time // s: Set<Int>
+// Access to set is only by iteration
+
+/*
+LAMBDA
+*/
+t = (a: Int, b: Int)->(c:Int, d:Int) {c = min(a,b); d = a + b}
+u = t(a: 1, b: 2)   // u.c = 1; u.d = 3
+
+w = t(b: 3)     // w = (a: Int)->(c:Int, d:Int) {c = min(a,3); d = a + 3}
+(x, y) = w(2)        // x = 2; y = 5

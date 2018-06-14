@@ -1,0 +1,17 @@
+// Comment in one line
+
+/*
+    Block comment
+    /* Block comment can be nested */
+*/
+
+// Constant value
+val a: Int
+// val could be omitted
+a: Int = 3
+// When value is setted using known literal, then type also can be omitted
+a = 4
+
+// Variables
+var c: Int = 5
+// For variables word var must exists
