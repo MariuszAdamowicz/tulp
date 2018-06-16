@@ -1,0 +1,20 @@
+{
+  parserClass="com.tulpplugin.parser.TulpParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Tulp"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.tulpplugin.psi"
+  psiImplPackage="com.tulpplugin.psi.impl"
+
+  elementTypeHolderClass="com.tulpplugin.psi.TulpTypes"
+  elementTypeClass="com.tulpplugin.psi.TulpElementType"
+  tokenTypeClass="com.tulpplugin.psi.TulpTokenType"
+}
+
+tulpFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
