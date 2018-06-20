@@ -1,0 +1,13 @@
+PRINT=1
+RIGHT_BRACKET=8
+NUMBER=3
+EQUALS=2
+LEFT_BRACKET=7
+STRING=4
+ID=5
+WS=6
+'='=2
+')'=8
+'('=7
+'print'=1
+'\'.*\''=4
