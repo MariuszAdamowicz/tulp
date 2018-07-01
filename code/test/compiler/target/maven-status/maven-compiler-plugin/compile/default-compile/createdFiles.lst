@@ -1,0 +1,8 @@
+com/mariuszadamowicz/parsing/TulpTreeWalkListener.class
+com/mariuszadamowicz/parsing/domain/Variable.class
+com/mariuszadamowicz/parsing/TulpTreeWalkErrorListener.class
+com/mariuszadamowicz/parsing/SyntaxTreeTraverser.class
+com/mariuszadamowicz/bytecodegeneration/instructions/PrintVariable.class
+com/mariuszadamowicz/bytecodegeneration/instructions/Instruction.class
+com/mariuszadamowicz/bytecodegeneration/instructions/VariableDeclaration.class
+com/mariuszadamowicz/Compiler.class

@@ -3,24 +3,28 @@ package com.mariuszadamowicz.parsing;
 import com.mariuszadamowicz.antlr.TulpBaseListener;
 import com.mariuszadamowicz.antlr.TulpParser;
 import com.mariuszadamowicz.bytecodegeneration.instructions.Instruction;
-import com.sun.org.apache.xpath.internal.operations.Variable;
+import com.mariuszadamowicz.bytecodegeneration.instructions.PrintVariable;
+import com.mariuszadamowicz.bytecodegeneration.instructions.VariableDeclaration;
+import com.mariuszadamowicz.parsing.domain.Variable;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+import java.util.ArrayDeque;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Queue;
 
 public class TulpTreeWalkListener extends TulpBaseListener {
 
-    Queue<Instruction> instructionsQueue = new ArrayDeque<>();
-    Map<String, Variable> variables = new HashMap<>();
+    Queue<Instruction> instructionsQueue = new ArrayDeque<Instruction>();
+    Map<String, Variable> variables = new HashMap<String, Variable>();
 
     public Queue<Instruction> getInstructionsQueue() {
         return instructionsQueue;
     }
 
     @Override
-    public void exitVariable(@NotNull TulpParser.VariableContext ctx) {
+    public void exitConstant(@NotNull TulpParser.ConstantContext ctx) {
         final TerminalNode varName = ctx.ID();
         final TulpParser.ValueContext varValue = ctx.value();
         final int varType = varValue.getStart().getType();

@@ -1,0 +1,8 @@
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/parsing/SyntaxTreeTraverser.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/bytecodegeneration/instructions/VariableDeclaration.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/parsing/domain/Variable.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/Compiler.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/parsing/TulpTreeWalkErrorListener.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/bytecodegeneration/instructions/PrintVariable.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/bytecodegeneration/instructions/Instruction.java
+/Volumes/DANE/Projekty/tulp/code/test/compiler/src/main/java/com/mariuszadamowicz/parsing/TulpTreeWalkListener.java

@@ -19,7 +19,7 @@ public class TulpParser extends Parser {
 	public static final int
 		PRINT=1, EQUALS=2, NUMBER=3, STRING=4, ID=5, WS=6, LEFT_BRACKET=7, RIGHT_BRACKET=8;
 	public static final String[] tokenNames = {
-		"<INVALID>", "'print'", "'='", "NUMBER", "''.*''", "ID", "WS", "'('", 
+		"<INVALID>", "'println'", "'='", "NUMBER", "STRING", "ID", "WS", "'('", 
 		"')'"
 	};
 	public static final int

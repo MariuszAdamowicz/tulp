@@ -13,7 +13,7 @@ import java.util.Queue;
 
 public class SyntaxTreeTraverser {
     public Queue<Instruction> getInstructions(String fileAbsolutePath) throws IOException {
-        CharStream charStream = new ANTLRFileStream(fileAbsolutePath); //fileAbolutePath - file containing first enk code file
+        CharStream charStream = new ANTLRFileStream(fileAbsolutePath); //fileAbolutePath - file containing first tulp code file
         TulpLexer lexer = new TulpLexer(charStream);  //create lexer (pass enk file to it)
         CommonTokenStream tokenStream = new CommonTokenStream(lexer);
         TulpParser parser = new TulpParser(tokenStream);

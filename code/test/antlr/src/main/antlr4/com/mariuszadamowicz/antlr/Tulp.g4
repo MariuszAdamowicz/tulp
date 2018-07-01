@@ -9,10 +9,10 @@ value : op=NUMBER
       | op=STRING ; //must be NUMBER or STRING value (defined below)
 
 //TOKENS
-PRINT : 'print' ;
+PRINT : 'println' ;
 EQUALS : '=' ; //must be '='
 NUMBER : [0-9]+ ; //must consist only of digits
-STRING : '\'.*\'' ; //must be anything in qutoes
+STRING : '\''[a-zA-Z_][a-zA-Z0-9]*'\'' ; //must be anything in qutoes
 ID : [a-zA-Z0-9]+ ; //must be any alphanumeric value
 WS: [ \t\n\r]+ -> skip ; //special TOKEN for skipping whitespaces
 LEFT_BRACKET : '(' ;
