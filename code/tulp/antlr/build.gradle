@@ -1,0 +1,16 @@
+plugins {
+    id 'antlr'
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    antlr "org.antlr:antlr4:4.7.1"
+    compile "org.antlr:antlr4-runtime:4.7.1"
+    testCompile 'junit:junit:4.12'
+}
+
+generateGrammarSource {
+    maxHeapSize = "64m"
+    arguments += ['-visitor', '-package', 'com.mariuszadamowicz.tulp']
+}
