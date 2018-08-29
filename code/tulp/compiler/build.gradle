@@ -1,14 +1,58 @@
 plugins {
-    id 'java'
+//    id 'java'
     id 'application'
+    id 'maven'
 }
+
+//def localMavenRepo = 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+//
+//repositories {
+//    mavenRepo urls: localMavenRepo
+//}
+
+//repositories {
+//    maven {
+//        name = 'localRepo'
+//        url = "$buildDir/localRepo"
+//    }
+//}
 
 sourceCompatibility = 1.8
 
-mainClassName = 'com.mariuszadamowicz.tulp.Tulp'
+mainClassName = 'tulp.Tulp'
+applicationName = 'tulp'
 
 dependencies {
     testCompile 'junit:junit:4.12'
+    compile project(':antlr')
+    compile project(':core')
+    compile 'org.apache.commons:commons-lang3:3.0'
+    compile 'commons-io:commons-io:2.6'
+    compile 'org.ow2.asm:asm:6.2.1'
 }
 
 
+distTar.enabled = false
+distZip.enabled = false
+processResources.enabled = false
+processTestResources.enabled = false
+
+
+task prepareTulpJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'tulp/Tulp'
+    }
+    baseName = 'tulp'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+//task prepareTulp(type: Copy) {
+//    from('build/libs') {
+//        include 'tulp*.jar'
+//    }
+//    into '../tests'
+//}
+
+prepareTulpJar.dependsOn ':compiler:build'
+//prepareTulp.dependsOn ':compiler:prepareTulpJar'

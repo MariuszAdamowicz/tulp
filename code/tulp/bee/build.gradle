@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+mainClassName = 'bee.com.mariuszadamowicz.bee.Bee'
+
+dependencies {
+    compile 'com.google.guava:guava:23.0'
+    testCompile 'junit:junit:4.12'
+    testCompile project(':compiler')
+}
+
+repositories {
+    jcenter()
+}

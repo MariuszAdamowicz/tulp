@@ -1,0 +1,6 @@
+class First {
+    start() {
+        a = 3
+        print(a)
+    }
+}

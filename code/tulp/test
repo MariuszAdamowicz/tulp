@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+NR="$1"
+
+while [ ${#NR} -lt 3 ] ; do
+    NR="0$NR"
+done
+
+WHERE="tests/test_$NR"
+cd $WHERE
+./tulp
+cd ../..
+

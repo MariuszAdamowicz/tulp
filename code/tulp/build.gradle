@@ -1,11 +1,24 @@
 allprojects {
 	repositories {
+//		mavenLocal()
 		jcenter()
 	}
 }
 
 subprojects {
 	version = '1.0'
-	group 'com.mariuszadamowicz'
+	group 'tulp'
 }
 
+//task finalizeBuild(type: Copy) {
+//	from zipTree("${projectDir}/compiler/build/distributions/tulp-1.0.zip")
+//	into "${projectDir}/bin"
+//}
+//
+
+task all {
+}
+
+all.dependsOn ':compiler:prepareTulpJar'
+
+//println(projectDir)

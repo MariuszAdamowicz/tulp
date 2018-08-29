@@ -12,5 +12,12 @@ dependencies {
 
 generateGrammarSource {
     maxHeapSize = "64m"
-    arguments += ['-visitor', '-package', 'com.mariuszadamowicz.tulp']
+    arguments += ['-visitor', '-package', 'tulp']
 }
+
+generateTestGrammarSource.enabled = false
+compileTestJava.enabled = false
+processTestResources.enabled = false
+testClasses.enabled = false
+test.enabled = false
+check.enabled = false

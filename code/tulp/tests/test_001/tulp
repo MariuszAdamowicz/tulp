@@ -1,0 +1,7 @@
+echo "Starting compilation First.tulp"
+java -jar ../../compiler/build/libs/tulp-1.0.jar compile First.tulp start start
+
+echo "Running First.class"
+java First
+#javap -s -c First
+
